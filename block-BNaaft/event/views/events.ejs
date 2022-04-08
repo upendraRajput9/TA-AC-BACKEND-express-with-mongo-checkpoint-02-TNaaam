@@ -1,0 +1,21 @@
+<% include partials/header %>
+<main class="allEvent-main">
+    <section class="container allEvent-section">
+        <div class="allEvent"><%list.forEach(event=>{%>
+            <article>
+             <h2><%=event.title%></h2>
+             <p><%=event.summary.toString().substring(0,150)%>...</p>
+<span> <b>Host by</b>  <%=event.host%></span>
+<address> <b>Location :</b>  <%=event.location%></address>
+<button>
+    <a href="/events/<%=event._id%>">Read more...</a>
+</button>
+ </article>
+ 
+            <%})%>
+
+        </div>
+        <% include partials/asideBar%>
+    </section>
+</main>
+    <% include partials/footer %>
