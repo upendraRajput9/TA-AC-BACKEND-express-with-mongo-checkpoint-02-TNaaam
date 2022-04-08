@@ -1,0 +1,24 @@
+<section class="aside-bar">
+    <article>
+        <h2>All categories</h2>
+        <ul><%categories.forEach(category=>{%>
+            
+<li>
+    <a href="/events/<%=category%>/category"><%=category%></a>
+    </li>
+       <%})%>
+
+        </ul>
+    </article>
+    <article>
+        <h2>All locations</h2>
+        <ul><%locations.forEach(place=>{%>
+            
+<li>
+    <a href="/events/<%=place%>/location"><%=place%></a>
+    </li>
+       <%})%>
+
+        </ul>
+    </article>
+</section>

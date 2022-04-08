@@ -1,0 +1,26 @@
+<% include partials/header %>
+    <section class="form-section">
+       
+    <form class="form" action="/events/" method="POST">
+        <h2>Add Event</h2>
+    <input type="text" placeholder="Title" name="title">
+    <textarea name="summary" placeholder="Summary" cols="30" rows="10"></textarea>
+    <input type="text" placeholder="Hosted by" name="host">
+    <legend class="flex">
+        <legend>
+        <label for="">Event started Date</label>
+        <input type="date" placeholder="Started Date" name="start_date">
+    </legend>
+<legend>
+        <label for="">Event ended Date</label>
+        <input type="date" placeholder="Ended Date" name="end_date">
+    </legend>
+    </legend>
+    
+    <input type="text" placeholder="Event_categories " name="event_category">
+    <input type="text" placeholder="Location" name="location">
+    <input class="submit" type="submit">
+    </form>
+</section>
+    
+<% include partials/footer %>
