@@ -22,13 +22,14 @@
 <section>
     <article class="container remark">
         <form action="/events/<%=event._id%>/remarks" method="POST">
-            <textarea name="title" cols="30" rows="5"></textarea>
+            <input type="text" name="author" placeholder="Enter your name here">
+            <textarea name="title" cols="30" rows="5" placeholder="Enter remark here"></textarea>
             <button type="submit">remark</button>
         </form>
         
         <ul><%event.remarks.forEach(remark=>{%>
             <li>
-               
+                <h2>Remark added by: <%=remark.author%></h2>
                 <h2><%=remark.title%></h2>
            <nav class="remark-items display-flex"> 
                <span class="likeDislike">

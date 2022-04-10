@@ -1,10 +1,9 @@
 var mongoose = require('mongoose')
-const { schema } = require('./Event')
 var Schema = mongoose.Schema
 var remarkSchema = new Schema(
   {
-    title: { type: String, required: true },
     author: String,
+    title: { type: String, required: true },
     likes: { type: Number, default: 0 },
     eventId: { type:Schema.Types.ObjectId, ref: 'Event' }
   },
