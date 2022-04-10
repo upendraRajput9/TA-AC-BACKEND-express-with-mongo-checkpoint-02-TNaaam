@@ -2,11 +2,12 @@ var express = require('express')
 var Event = require('../models/Event')
 var Remark = require('../models/Remark')
 var router = express.Router()
+var moment = require('moment')
 
 /* GET users listing. */
 //All category
-var categorie;
-var location;
+var categorie
+var location
 //Event_Form
 router.get('/new', (req, res) => {
   res.render('eventForm')
@@ -31,15 +32,15 @@ router.get('/', (req, res, next) => {
 
     Event.distinct('event_category', (err, elem) => {
       if (err) return next(err)
-      elem.forEach(str=> allCategories.push(str))
-     
+      elem.forEach((str) => allCategories.push(str))
+
       Event.distinct('location', (err, loc) => {
         if (err) return next(err)
         allLocations.push(loc)
         categorie = allCategories
         allLocations = allLocations.flat()
-  location = allLocations
-  
+        location = allLocations
+
         res.render('events', {
           list: events,
           categories: allCategories,
@@ -48,17 +49,15 @@ router.get('/', (req, res, next) => {
       })
     })
   })
-  
-});
-
+})
 
 //find by category
 router.get('/:category/category', (req, res, next) => {
   let category = req.params.category
-  Event.find({"event_category": {$in:[category]}}, (err, events) => {
+  Event.find({ event_category: { $in: [category] } }, (err, events) => {
     if (err) return next(err)
-    
- res.render('events', {
+
+    res.render('events', {
       list: events,
       categories: categorie,
       locations: location,
@@ -69,7 +68,7 @@ router.get('/:category/category', (req, res, next) => {
 //find by location
 router.get('/:location/location', (req, res, next) => {
   let loc = req.params.location
-  Event.find({ "location": loc }, (err, events) => {
+  Event.find({ location: loc }, (err, events) => {
     if (err) return next(err)
     console.log(location)
     res.render('events', {
@@ -94,8 +93,13 @@ router.get('/:id', (req, res, next) => {
 router.get('/:id/edit', (req, res, next) => {
   let id = req.params.id
   Event.findById(id, (err, event) => {
+    // event.start_date = event.start_date.toString().split('T')[0]
     if (err) return next(err)
-    res.render('eventUpdate', { event: event })
+    event.end_date = moment(event.end_date).format('DD/MM/YYYY').toString()
+    event.start_date = moment(event.start_date).format('DD/MM/YYYY').toString()
+    res.render('eventUpdate', {
+      event: event,
+    })
   })
 })
 

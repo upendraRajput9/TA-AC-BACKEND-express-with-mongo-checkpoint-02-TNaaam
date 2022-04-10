@@ -363,6 +363,14 @@ footer {
   width: 25%;
 }
 
+.remark form input {
+  padding: 0.5rem 0;
+  border-radius: 0 1.5rem 0 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+}
+
 .remark form textarea {
   border-radius: 0 1.5rem 0 1.5rem;
 }
@@ -388,7 +396,6 @@ footer {
 }
 
 .remark-edit {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,6 +437,16 @@ footer {
   font-size: 1rem;
   font-family: sans-serif;
   padding: 1rem;
+  color: white;
+}
+
+.remark-edit form input {
+  background-color: rgba(151, 151, 151, 0.7);
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 6px;
   color: white;
 }
 

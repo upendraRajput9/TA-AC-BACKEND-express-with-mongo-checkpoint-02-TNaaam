@@ -13,7 +13,7 @@ res.render("remarkUpdate",{remark})
 router.post("/:id",(req,res)=>{
     let id = req.params.id;
     console.log(req.body)
-    Remark.findByIdAndUpdate(id,{title:req.body.title},(err,remark)=>{
+    Remark.findByIdAndUpdate(id,req.body,(err,remark)=>{
         if(err) return next(err)
 res.redirect("/events/"+remark.eventId)
     })
