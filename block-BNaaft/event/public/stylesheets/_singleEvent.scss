@@ -1,0 +1,126 @@
+.single-event-main{
+    height: 80vh;
+    font-family: sans-serif;
+}
+.single-event{
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+    
+    
+    
+    h2{
+        font-size: 2rem;
+    }
+    
+}
+.remark{
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+     input{
+       padding: 0.5rem 0;
+       border-radius: 0 1.5rem 0 0;
+       padding: 0.5rem 1rem ;
+       border: 1px solid black;
+       margin-bottom: 0.5rem;
+     }
+      textarea {
+        border-radius: 0 1.5rem 0 1.5rem;
+      }
+      button {
+        border-radius: 5px 0 5px 0;
+        border: 1px solid red;
+        background-color: red;
+        color: white;
+        width: 30%;
+        margin: 1rem 0;
+        &:hover {
+          background-color: green;
+          border: 1px solid green;
+          border-radius: 0 5px 0 5px;
+          color: white;
+        }
+      }
+    }
+    .remark-items{
+        div{
+            padding-left: 4rem;
+        }
+    }
+  }
+
+  .remark-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    height: 85vh;
+    background-image: url("../images/hero1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    form {
+      width: 40%;
+      padding: 2rem 3rem;
+      border: 1rem solid rgba(22, 22, 22, 0.5);
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 2rem 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 3rem;
+      }
+      textarea{
+          background-color: rgba(151, 151, 151, 0.7);
+          font-size: 1rem;
+          font-family: sans-serif;
+          padding:1rem;
+          color: white;
+      }
+      input{
+        background-color: rgba(151, 151, 151, 0.7);
+        font-size: 1rem;
+        font-family: sans-serif;
+        margin-bottom: 1rem;
+        border: none;
+        padding: 6px;
+        color: white;
+      }
+      button{
+          padding:0.2rem 0;
+          margin-top: 1rem;
+          width: 30%;
+          border-radius: 1rem;
+          border: 3px solid rgb(56, 56, 56);
+          background-color: rgb(0, 0, 0);
+          color: white;
+          &:hover{
+              background-color: rgb(51, 51, 51);
+              border: 3px solid rgb(10, 10, 10);
+          }
+      }
+    }
+  }
+  .likeDislike{
+    a{
+        color: black;
+    }
+}
+.edit-btn{
+    font-size: 1rem;
+    background-color: rgba(165, 245, 86, 0.3);
+    border: 1px solid green;
+    a{
+        color: green;
+    }
+}
+.delete-btn{
+    font-size: 1rem;
+    background-color: rgba(245, 91, 86, 0.3);
+    border: 1px solid rgb(128, 0, 0);
+    a{
+        color: rgb(128, 0, 0);
+    }
+}

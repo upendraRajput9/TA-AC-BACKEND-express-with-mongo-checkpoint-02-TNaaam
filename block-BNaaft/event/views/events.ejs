@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body id="body">
+    <header class="hero-header">
+        <div class="container">
+        <h1 class="logo text-color">Event</h1>
+        <nav>
+        <a href="/">Home</a>
+        <a href="/events/new">Add Event</a>
+        <a href="/events/">All Event</a>
+    </nav>
+    </div>
+    </header>
+
+<main class="allEvent-main" id="main">
+    <section class="container allEvent-section">
+        <div class="allEvent"><%list.forEach(event=>{%>
+            <article>
+             <h2><%=event.title%></h2>
+             <p><%=event.summary.toString().substring(0,150)%>...</p>
+<span> <b>Host by</b>  <%=event.host%></span>
+<address> <b>Location :</b>  <%=event.location%></address>
+<button>
+    <a href="/events/<%=event._id%>">Read more...</a>
+</button>
+ </article>
+ 
+            <%})%>
+
+        </div>
+        <% include partials/asideBar%>
+    </section>
+</main>
+</body>
+ </html>
+ 

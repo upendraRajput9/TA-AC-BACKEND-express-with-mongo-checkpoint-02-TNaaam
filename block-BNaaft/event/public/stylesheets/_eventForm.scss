@@ -1,0 +1,44 @@
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url("../images/hero1.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position-x: center;
+    form{
+        border: 2px solid black;
+        padding: 1rem 5rem;
+        display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 2rem 0;
+  color: white;
+  background-color: rgba(0, 0, 0,0.5);
+  border-radius: 1.5rem;
+  legend{
+    label{
+        padding-right: 2rem;
+        font-size: 1.5rem;
+    }
+    input{
+        width: 100%;
+        
+    }
+  }
+  
+  h2{
+      font-size: 1.5rem;
+  }
+  input{
+    margin: 1rem 0;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+  }
+  textarea{
+    background-color: rgba(255, 255, 255, 0.8);
+    
+  }
+    }
+}

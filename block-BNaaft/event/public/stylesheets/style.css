@@ -1,0 +1,543 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-spacebtm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  font-family: 'Audiowide', cursive;
+  line-height: 1.6;
+}
+
+.hero-header {
+  color: white;
+  background-color: black;
+}
+
+.hero-header h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.hero-header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-header div nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-header div nav a {
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.hero {
+  margin: 0.5px 0;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: azure;
+  font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  padding: 5rem 0;
+}
+
+.hero button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0;
+}
+
+.hero button a {
+  color: #181818;
+  font-weight: bolder;
+  font-family: 'Audiowide', cursive;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../images/hero1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.form-section form {
+  border: 2px solid black;
+  padding: 1rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: 2rem 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+}
+
+.form-section form legend label {
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.form-section form legend input {
+  width: 100%;
+}
+
+.form-section form h2 {
+  font-size: 1.5rem;
+}
+
+.form-section form input {
+  margin: 1rem 0;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-section form textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.allEvent-main {
+  padding: 2rem 0;
+}
+
+.allEvent-section {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.allEvent-section .aside-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+}
+
+.allEvent-section .aside-bar article {
+  padding: 1rem;
+  background-color: black;
+}
+
+.allEvent-section .aside-bar article h2 {
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+}
+
+.allEvent-section .aside-bar article li {
+  border-bottom: 1px solid white;
+  background-color: black;
+  padding: 5px;
+}
+
+.allEvent-section .aside-bar article li a {
+  color: white;
+}
+
+.allEvent-section .aside-bar article form {
+  color: azure;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.allEvent-section .aside-bar article form #submit {
+  width: 30%;
+  margin-top: 10px;
+}
+
+.allEvent-section .aside-bar .dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.allEvent-section .aside-bar li {
+  width: 100%;
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.allEvent-section .aside-bar li:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.allEvent-section .aside-bar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.allEvent {
+  width: 65%;
+}
+
+.allEvent article {
+  background-color: #131313;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border: 4px solid black;
+  border-radius: 1rem;
+  color: white;
+}
+
+.allEvent article h2 {
+  font-size: 2rem;
+}
+
+.allEvent article b {
+  color: #777777;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.allEvent article p {
+  color: #e4e4e4;
+}
+
+.allEvent article button {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.3px solid #dddddd;
+  padding: 5px;
+  border-radius: 4px 0;
+  margin: 7px 0;
+}
+
+.allEvent article button a {
+  color: white;
+  font-weight: bolder;
+}
+
+.single-event-main {
+  height: 80vh;
+  font-family: sans-serif;
+}
+
+.single-event {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.single-event h2 {
+  font-size: 2rem;
+}
+
+.remark form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+
+.remark form input {
+  padding: 0.5rem 0;
+  border-radius: 0 1.5rem 0 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+}
+
+.remark form textarea {
+  border-radius: 0 1.5rem 0 1.5rem;
+}
+
+.remark form button {
+  border-radius: 5px 0 5px 0;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  width: 30%;
+  margin: 1rem 0;
+}
+
+.remark form button:hover {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 0 5px 0 5px;
+  color: white;
+}
+
+.remark .remark-items div {
+  padding-left: 4rem;
+}
+
+.remark-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem 0;
+  height: 85vh;
+  background-image: url("../images/hero1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.remark-edit form {
+  width: 40%;
+  padding: 2rem 3rem;
+  border: 1rem solid rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.remark-edit form h1 {
+  font-size: 3rem;
+}
+
+.remark-edit form textarea {
+  background-color: rgba(151, 151, 151, 0.7);
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 1rem;
+  color: white;
+}
+
+.remark-edit form input {
+  background-color: rgba(151, 151, 151, 0.7);
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 6px;
+  color: white;
+}
+
+.remark-edit form button {
+  padding: 0.2rem 0;
+  margin-top: 1rem;
+  width: 30%;
+  border-radius: 1rem;
+  border: 3px solid #383838;
+  background-color: black;
+  color: white;
+}
+
+.remark-edit form button:hover {
+  background-color: #333333;
+  border: 3px solid #0a0a0a;
+}
+
+.likeDislike a {
+  color: black;
+}
+
+.edit-btn {
+  font-size: 1rem;
+  background-color: rgba(165, 245, 86, 0.3);
+  border: 1px solid green;
+}
+
+.edit-btn a {
+  color: green;
+}
+
+.delete-btn {
+  font-size: 1rem;
+  background-color: rgba(245, 91, 86, 0.3);
+  border: 1px solid maroon;
+}
+
+.delete-btn a {
+  color: maroon;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+<% include partials/header %>
+<section class="remark-edit">
+<form action="/remarks/<%=remark._id%>/" method="POST" >
+    <input type="text" name="author" value="<%=remark.author%>">
+    <textarea name="title" cols="30" rows="5"><%=remark.title%></textarea>
+    <button type="submit">Edit remark</button>
+</form>
+</section>
+<% include partials/footer %>

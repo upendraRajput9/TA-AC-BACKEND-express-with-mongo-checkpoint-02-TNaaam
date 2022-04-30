@@ -1,0 +1,56 @@
+<% include partials/header %>
+<main class="single-event-main">
+    <section class="container single-event">
+        <h2><%=event.title%></h2>
+        <div class="flex-spacebtm">
+        <span>Hosted by <%=event.host%></span>
+        <span>Event started on <%=event.start_date.toString().substring(0,15)%></span>
+    </div>
+       <p><%=event.summary%></p>
+       <div class="flex-spacebtm">
+       <span>Location : <%=event.location%></span> <span class="likeDislike"><a href="/events/<%=event._id%>/like">👍 like</a> <a href="/events/<%=event._id%>/dislike"> 👎 dislike</a> : <%=event.likes%></span>
+    </div>
+       <div>
+           <button class="edit-btn">
+               <a href="/events/<%=event._id%>/edit">Edit</a>
+           </button>
+           <button class="delete-btn">
+            <a href="/events/<%=event._id%>/delete">Delete</a>
+        </button>
+       </div>
+    </section>
+<section>
+    <article class="container remark">
+        <form action="/events/<%=event._id%>/remarks" method="POST">
+            <input type="text" name="author" placeholder="Enter your name here">
+            <textarea name="title" cols="30" rows="5" placeholder="Enter remark here"></textarea>
+            <button type="submit">remark</button>
+        </form>
+        
+        <ul><%event.remarks.forEach(remark=>{%>
+            <li>
+                <h2>Remark added by: <%=remark.author%></h2>
+                <h2><%=remark.title%></h2>
+           <nav class="remark-items display-flex"> 
+               <span class="likeDislike">
+            <a class="text-color" href="/remarks/<%=remark._id%>/like">like 👍 </a>
+            <a class="text-color" href="/remarks/<%=remark._id%>/dislike"> dislike 👎 :<%=remark.likes%></a>
+        </span>
+    <div>
+        <button class="edit-btn">
+               <a class="gold-color" href="/remarks/<%=remark._id%>/edit">Edit</a>
+            </button>
+            <button class="delete-btn">
+               <a class="gold-color" href="/remarks/<%=remark._id%>/delete">Delete</a>
+            </button>
+            </div>
+            </nav>
+           
+            </li>
+            <%})%>
+        
+        </ul>
+        </article>
+</section>
+</main>
+<% include partials/footer %>
