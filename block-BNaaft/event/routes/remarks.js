@@ -39,10 +39,16 @@ router.get("/:id/like",(req,res)=>{
 })
 router.get("/:id/dislike",(req,res)=>{
     let id = req.params.id;
+    Remark.findById(id,(err,sinremark)=>{
+        if(err) return next(err)
+if(sinremark.likes>0){
     Remark.findByIdAndUpdate(id,{$inc:{ likes: -1}},(err,remark)=>{
         if(err) return next(err)
             res.redirect("/events/"+remark.eventId)
     })
+}
+    })
+    
 })
 
 
